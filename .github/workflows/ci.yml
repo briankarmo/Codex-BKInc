@@ -68,6 +68,9 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Make stage_release.sh executable
+        run: chmod +x codex-cli/scripts/stage_release.sh
+
       - name: Ensure staging a release works.
         working-directory: codex-cli
         env:
